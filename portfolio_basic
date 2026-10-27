@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Portfolio</title>
+
+</head>
+
+<body>
+
+    <h1 id="heading">My Portfolio</h1>
+    <hr>
+
+   
+    <img src="marksheets/Photo.jpg" width=200 id="id2"
+
+    alt="">
+    <h2>Personal Information</h2>
+
+    
+    
+    <p><big><b>Name: </b> Manishi Sharma</big><br></p>
+    <b>D.O.B: </b> 26/04/2006 <br>
+    <b>Age: </b> 20 <br>
+    <b>Gender: </b> Female <br>
+    <b>Email: </b> abc@gmail.com <br>
+    <b>Phone: </b> +91-XXXXXXXXXX <br>
+    <b>Address: </b> Lucknow, Uttar Pradesh, India <br>
+    
+
+    <hr>
+
+    <h2>About Me</h2>
+
+    <p>
+        Hello! My name is Manishi Sharma. I am a student interested in
+        web development and programming. I enjoy learning new
+        technologies and developing new skills.
+    </p>
+
+    <hr>
+
+    <h2>My Education</h2>
+
+    <p><b>10th Standard:</b> St. Don Bosco College</p>
+    <p><b>12th Standard:</b> St. Don Bosco College </p>
+
+    
+    <p><b>College:</b>
+         <a href="https://srmu.ac.in">
+            Shri Ramswaroop Memorial University
+        </a>
+
+            
+    </p>
+
+    <p><b>Course:</b> B.Tech CS(AI-ML)</p>
+
+    <hr>
+
+
+    <h2>My Mark Sheets</h2>
+
+    
+        <a href="newmarksheet.png">
+            10th Marksheet
+        </a><br>
+    
+
+    
+        <a href="newmarksheet.png">
+            12th Marksheet
+        </a><br>
+    
+
+  
+        <a href="marksheets/1st-semester.jpg">
+            1st Semester Marksheet
+        </a><br>
+    
+
+    
+        <a href="marksheets/2nd-semester.jpg">
+            2nd Semester Marksheet
+        </a><br>
+    
+
+    
+        <a href="https://srmu.ac.in">
+            SRMU Official Website
+        </a><br>
+    
+
+    <hr>
+
+    <h2>My Skills</h2>
+    <ul>
+        <li>HTML</li>
+        <li>Python</li>
+        <li>C Programming</li>
+        <li>Java</li>
+    </ul>
+
+
+
+    <hr>
+
+    <h2>Contact Me</h2>
+
+    <p>
+    <pre>
+    Phone: +91-XXXXXXXXXX           Email: abc@gmail.com
+    </pre></p>
+
+    <br>
+
+    <p><big>Thank you for visiting my portfolio!</big></p>
+    <a href="Contact.html">Contact Me</a>
+
+</body>
+</html>
+
+
+
