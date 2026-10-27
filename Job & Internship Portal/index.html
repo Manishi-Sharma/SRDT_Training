@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Jobshala | Find Jobs and Internships</title>
+
+    <!-- Connect HTML with CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <header class="navbar">
+
+        <a href="#" class="logo">Job<span>shala</span></a>
+
+        <nav class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#categories">Categories</a>
+            <a href="#internships">Internships</a>
+            <a href="#about">About Us</a>
+        </nav>
+
+        <a href="#internships" class="nav-button">Get Started</a>
+
+    </header>
+
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <p class="tagline">YOUR CAREER STARTS HERE</p>
+
+            <h1>
+                Find Your Dream Job.
+                <span>Build Your Future.</span>
+            </h1>
+
+            <p class="hero-description">
+                Discover exciting job opportunities and internships.
+                Take the next step in your career with Jobshala.
+            </p>
+
+            <!-- Search Bar -->
+            <!-- <form class="search-bar" action="#internships"> -->
+
+                <input
+                    type="text"
+                    placeholder="Search jobs or internships"
+                    aria-label="Search jobs or internships"
+                >
+
+                <select aria-label="Select job category">
+                    <option value="">All Categories</option>
+                    <option>Web Development</option>
+                    <option>Graphic Design</option>
+                    <option>Data Science</option>
+                    <option>Marketing</option>
+                </select>
+
+                <button type="submit">Search</button>
+
+            </form>
+
+            <p class="popular">
+                Popular: Web Development, Design, Data Science
+            </p>
+
+        </div>
+
+        <div class="hero-visual">
+            <div class="visual-card">
+                <div class="visual-icon">💼</div>
+                <h2>Your Future Awaits</h2>
+                <p>Explore. Learn. Grow.</p>
+
+                <div class="visual-stat">
+                    <span>🎯</span>
+                    <div>
+                        <strong>Find Your Match</strong>
+                        <p>Opportunities for you</p>
+                    </div>
+                </div>
+
+                <div class="visual-stat">
+                    <span>🚀</span>
+                    <div>
+                        <strong>Start Your Journey</strong>
+                        <p>Build career-ready skills</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+    <!-- Categories Section -->
+    <section class="section" id="categories">
+
+        <div class="section-heading">
+            <p class="tagline">EXPLORE OPPORTUNITIES</p>
+            <h2>Popular Categories</h2>
+            <p>Discover opportunities that match your interests.</p>
+        </div>
+
+        <div class="category-grid">
+
+            <div class="category-card">
+                <div class="category-icon">💻</div>
+                <h3>Web Development</h3>
+                <p>Build websites and digital experiences.</p>
+                <a href="#internships">Explore →</a>
+            </div>
+
+            <div class="category-card">
+                <div class="category-icon">🎨</div>
+                <h3>Graphic Design</h3>
+                <p>Turn your creativity into a career.</p>
+                <a href="#internships">Explore →</a>
+            </div>
+
+            <div class="category-card">
+                <div class="category-icon">📊</div>
+                <h3>Data Science</h3>
+                <p>Discover insights through data.</p>
+                <a href="#internships">Explore →</a>
+            </div>
+
+            <div class="category-card">
+                <div class="category-icon">📢</div>
+                <h3>Digital Marketing</h3>
+                <p>Grow brands and reach audiences.</p>
+                <a href="#internships">Explore →</a>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Featured Internships Section -->
+    <section class="section internships" id="internships">
+
+        <div class="section-heading">
+            <p class="tagline">TAKE THE FIRST STEP</p>
+            <h2>Featured Internships</h2>
+            <p>Explore sample opportunities to start your career journey.</p>
+        </div>
+
+        <!-- <div class="job-grid">
+
+            <div class="job-card">
+                <div class="job-top">
+                    <div class="company-icon blue">WD</div>
+                    <span class="job-type">Remote</span>
+                </div>
+
+                <h3>Web Development Intern</h3>
+                <p class="company-name">Tech Solutions</p>
+
+                <div class="job-details">
+                    <span>📍 Remote</span>
+                    <span>⏳ 3 Months</span>
+                </div>
+
+                <div class="job-bottom">
+                    <p><strong>₹8,000</strong><span> / month</span></p>
+                    <a href="mailto:careers@example.com?subject=Web%20Development%20Internship">Apply Now →</a>
+                </div>
+            </div>
+
+
+            <div class="job-card">
+                <div class="job-top">
+                    <div class="company-icon orange">GD</div>
+                    <span class="job-type">Hybrid</span>
+                </div>
+
+                <h3>Graphic Design Intern</h3>
+                <p class="company-name">Creative Studio</p>
+
+                <div class="job-details">
+                    <span>📍 Hybrid</span>
+                    <span>⏳ 2 Months</span>
+                </div>
+
+                <div class="job-bottom">
+                    <p><strong>₹6,000</strong><span> / month</span></p>
+                    <a href="mailto:careers@example.com?subject=Graphic%20Design%20Internship">Apply Now →</a>
+                </div>
+            </div>
+
+
+            <div class="job-card">
+                <div class="job-top">
+                    <div class="company-icon green">DS</div>
+                    <span class="job-type">Remote</span>
+                </div>
+
+                <h3>Data Science Intern</h3>
+                <p class="company-name">DataWorks</p>
+
+                <div class="job-details">
+                    <span>📍 Remote</span>
+                    <span>⏳ 6 Months</span>
+                </div>
+
+                <div class="job-bottom">
+                    <p><strong>₹10,000</strong><span> / month</span></p>
+                    <a href="mailto:careers@example.com?subject=Data%20Science%20Internship">Apply Now →</a>
+                </div>
+            </div> -->
+
+        </div>
+
+        <p class="demo-note">
+            Note: The companies, roles, and stipends above are sample content
+            for the static website, not verified vacancies.
+        </p>
+
+    </section>
+
+
+    <!-- About Section -->
+    <section class="about-section" id="about">
+
+        <div class="about-content">
+            <p class="tagline">ABOUT JOBSHALA</p>
+
+            <h2>Your Talent Deserves the Right Opportunity.</h2>
+
+            <p>
+                Jobshala is designed to help students and freshers explore
+                career opportunities, discover internships, and take their
+                first steps towards professional growth.
+            </p>
+
+            <a href="#internships" class="primary-button">
+                Explore Opportunities →
+            </a>
+        </div>
+
+        <div class="about-highlight">
+            <div class="highlight-symbol">🌟</div>
+            <h3>Learn. Apply. Achieve.</h3>
+            <p>Your journey towards a brighter career begins with one step.</p>
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+
+        <div class="footer-main">
+            <a href="#home" class="logo footer-logo">
+                Job<span>shala</span>
+            </a>
+
+            <p>Connecting ambition with opportunity.</p>
+        </div>
+
+        <div class="footer-links">
+            <a href="#home">Home</a>
+            <a href="#categories">Categories</a>
+            <a href="#internships">Internships</a>
+            <a href="#about">About Us</a>
+        </div>
+
+        <p class="copyright">
+            © 2026 Jobshala. All rights reserved.
+        </p>
+
+    </footer>
+
+</body>
+</html>
