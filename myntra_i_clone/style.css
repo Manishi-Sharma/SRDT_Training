@@ -1,78 +1,479 @@
-#myntra{
-    color:hotpink;
-}
-.navbar{
-    display: flex;
-    justify-content:space-between ;
-   
-    align-items: baseline;
-}
-.search {
-    width: 100%;
-    max-width: 100%;
+```css
+/* =========================
+   1. BASIC RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    margin-top: 0px;
-    
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ffffff;
+    color: #282c3f;
+}
+
+
+/* =========================
+   2. NAVBAR
+========================= */
+
+header {
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar {
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 10px 4%;
+    gap: 25px;
+}
+
+
+/* LOGO */
+
+#myntra {
+    color: #ff3f6c;
+    font-size: 27px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+
+/* NAVIGATION LINKS */
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #282c3f;
+
+    font-size: 12px;
+    font-weight: bold;
+    white-space: nowrap;
+
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ff3f6c;
+}
+
+
+/* SEARCH BAR */
+
+.search {
+    display: flex;
+    align-items: center;
+
+    background-color: #f5f5f6;
+    padding: 11px 14px;
+
+    border-radius: 5px;
+
+    flex: 1;
+    max-width: 380px;
+    gap: 10px;
+}
+
+.search span {
+    font-size: 15px;
 }
 
 .search input {
+    border: none;
+    outline: none;
+    background: transparent;
+
     width: 100%;
-    height:40px;
-    box-sizing: border-box;
-    padding:12px 15px;
+    font-size: 12px;
 }
-.profile{
+
+
+/* PROFILE, WISHLIST AND BAG */
+
+.profile {
     display: flex;
-    justify-content:center;
     align-items: center;
-    gap:9px;
-    margin-top: 0px;
-    color: dimgrey;
+    gap: 22px;
 }
-.sale-banner {
-    background: linear-gradient(120deg, #fff0f5, #ffe0eb);
+
+.profile-item {
     text-align: center;
-    padding: 60px 20px;
-    margin: 30px 0;
-    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.profile-item span {
+    font-size: 19px;
+}
+
+.profile-item p {
+    font-size: 11px;
+    font-weight: bold;
+    margin-top: 4px;
+}
+
+.profile-item:hover {
+    color: #ff3f6c;
+}
+
+
+/* =========================
+   3. SALE BANNER
+========================= */
+
+.sale-banner {
+    text-align: center;
+
+    padding: 85px 20px;
+
+    background: linear-gradient(
+        120deg,
+        #ffe0e9,
+        #ffd2d8,
+        #ffe8ce
+    );
 }
 
 .sale-tag {
     color: #ff3f6c;
-    font-size: 14px;
+
+    font-size: 13px;
     font-weight: bold;
-    letter-spacing: 3px;
+    letter-spacing: 4px;
+
+    margin-bottom: 18px;
 }
 
 .sale-banner h2 {
-    color: #282c3f;
-    font-size: 42px;
-    margin: 15px 0;
+    font-size: 43px;
+    font-weight: 800;
+    letter-spacing: 2px;
+
+    margin-bottom: 15px;
 }
 
 .sale-banner h3 {
     color: #ff3f6c;
-    font-size: 28px;
-    margin: 10px 0;
+
+    font-size: 31px;
+    margin-bottom: 18px;
 }
 
 .sale-description {
-    color: #535766;
-    font-size: 16px;
-    margin: 20px 0;
+    color: #555555;
+    font-size: 15px;
+
+    margin-bottom: 28px;
 }
 
+
+/* SHOP NOW BUTTON */
+
 .shop-btn {
-    
-    background-color: #ff3f6c;
+    display: inline-block;
+
+    background-color: #282c3f;
     color: white;
+
+    padding: 14px 32px;
+
     text-decoration: none;
-    padding: 14px 30px;
-    margin-top: 10px;
+    font-size: 13px;
     font-weight: bold;
+
     border-radius: 4px;
+
+    transition: 0.3s;
 }
 
 .shop-btn:hover {
-    background-color: #e8325c;
+    background-color: #ff3f6c;
+    transform: translateY(-4px);
 }
+
+
+/* =========================
+   4. SHOP BY CATEGORY
+========================= */
+
+.categories {
+    padding: 55px 5%;
+}
+
+.categories h2,
+.trending h2 {
+    text-align: center;
+
+    font-size: 27px;
+    font-weight: 800;
+    letter-spacing: 2px;
+
+    margin-bottom: 40px;
+}
+
+
+/* CATEGORY CONTAINER */
+
+.category-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+
+/* CATEGORY CARD */
+
+.category {
+    text-align: center;
+    cursor: pointer;
+
+    transition: transform 0.3s;
+}
+
+.category img {
+    width: 220px;
+    height: 260px;
+
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.category h3 {
+    margin-top: 13px;
+
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+
+.category:hover {
+    transform: translateY(-7px);
+}
+
+
+/* =========================
+   5. TRENDING PRODUCTS
+========================= */
+
+.trending {
+    padding: 55px 5%;
+    background-color: #fafafa;
+}
+
+
+/* PRODUCT CONTAINER */
+
+.product-container {
+    display: flex;
+    justify-content: center;
+
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+
+/* PRODUCT CARD */
+
+.product {
+    width: 220px;
+    background-color: white;
+
+    padding-bottom: 15px;
+
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.product img {
+    width: 100%;
+    height: 260px;
+
+    object-fit: cover;
+}
+
+.product h3 {
+    font-size: 16px;
+    margin: 12px 10px 6px;
+}
+
+.product p {
+    color: #ff3f6c;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    margin: 0 10px;
+}
+
+.product:hover {
+    transform: translateY(-7px);
+}
+
+
+/* =========================
+   6. FOOTER
+========================= */
+
+footer {
+    background-color: #282c3f;
+    color: white;
+
+    text-align: center;
+    padding: 45px 20px;
+}
+
+footer h2 {
+    color: #ff3f6c;
+    font-size: 25px;
+
+    margin-bottom: 15px;
+}
+
+footer p {
+    font-size: 13px;
+    margin-bottom: 15px;
+}
+
+
+/* FOOTER LINKS */
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+
+    gap: 25px;
+    flex-wrap: wrap;
+
+    margin: 25px 0;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 13px;
+
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #ff3f6c;
+}
+
+
+/* COPYRIGHT */
+
+.copyright {
+    color: #cccccc;
+    font-size: 11px;
+}
+
+
+/* =========================
+   7. RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 1100px) {
+
+    .navbar {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .search {
+        max-width: 100%;
+        flex-basis: 100%;
+    }
+
+}
+
+
+/* TABLETS AND MOBILE */
+
+@media (max-width: 600px) {
+
+    .navbar {
+        gap: 18px;
+        padding: 15px;
+    }
+
+    #myntra {
+        font-size: 24px;
+    }
+
+    nav {
+        gap: 13px;
+    }
+
+    nav a {
+        font-size: 11px;
+    }
+
+    .profile {
+        gap: 18px;
+    }
+
+    .sale-banner {
+        padding: 55px 15px;
+    }
+
+    .sale-banner h2 {
+        font-size: 27px;
+    }
+
+    .sale-banner h3 {
+        font-size: 23px;
+    }
+
+    .sale-description {
+        font-size: 13px;
+    }
+
+    .categories,
+    .trending {
+        padding: 40px 15px;
+    }
+
+    .categories h2,
+    .trending h2 {
+        font-size: 22px;
+    }
+
+    .category img {
+        width: 145px;
+        height: 180px;
+    }
+
+    .product {
+        width: 155px;
+    }
+
+    .product img {
+        height: 190px;
+    }
+
+}
+```
