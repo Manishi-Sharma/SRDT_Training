@@ -1,0 +1,71 @@
+
+name: Deploy Myntra and Jobshala
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'myntra_i_clone/**'
+      - 'Job & Internship Portal/**'
+      - '.github/workflows/deploy-projects.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Prepare websites
+        run: |
+          mkdir -p public/myntra_i_clone
+          mkdir -p "public/Job & Internship Portal"
+
+          cp -R myntra_i_clone/. public/myntra_i_clone/
+          cp -R "Job & Internship Portal/." "public/Job & Internship Portal/"
+
+          cat > public/index.html <<'EOF'
+          <!DOCTYPE html>
+          <html lang="en">
+          <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <title>My Projects</title>
+          </head>
+          <body>
+            <h1>My Projects</h1>
+            <ul>
+              <li><a href="myntra_i_clone/">Myntra Clone</a></li>
+              <li><a href="Job%20%26%20Internship%20Portal/">Jobshala</a></li>
+            </ul>
+          </body>
+          </html>
+          EOF
+
+      - name: Upload website files
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: public
+
+      - name: Deploy websites
+        id: deployment
+        uses: actions/deploy-pages@v4
